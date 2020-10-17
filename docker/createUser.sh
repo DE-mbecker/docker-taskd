@@ -12,6 +12,7 @@ taskd add org ${TASKD_ORGANIZATION}
 UID=$(taskd add user "${TASKD_ORGANIZATION}" "${TASKD_USERNAME}" | grep 'key' | cut -d' ' -f 4)
 
 cd ${TASKDDATA}/pki
+mkdir ${TASKDDATA}/client
 ./generate.client user_client
 
 CREDENTIALS="${TASKD_ORGANIZATION}/${TASKD_USERNAME}/${UID}"
