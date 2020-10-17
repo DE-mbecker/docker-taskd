@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web:
+    image: 'taskd:0.2'
+    build: .
+    restart: 'always'
+    networks:
+      - traefik
+    env_file: .env
+    volumes:
+      - '/srv/taskd/data:/var/taskd'
+      - '/srv/taskd/vars:/var/taskd/pki/vars'
+    labels:
+      - "traefik.enable=true"
+      - "traefik.taskd.routers.taskwarrior.rule=Host(`${TASKD_HOSTNAME}`)"
+      - "traefik.taskd.routers.taskwarrior.entrypoints=tcp"
+      - "traefik.taskd.routers.taskwarrior.service=${TASKD_SERVICE}"
+
+networks:
+  traefik:
+    external: true

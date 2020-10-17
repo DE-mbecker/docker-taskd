@@ -91,6 +91,8 @@ Please note that the `--rm` modifier destroy the docker after shell exit.
 - `CLIENT_CERT_PATH` : (mounted) folder where client certificate and credentials will be stored
 - `TASKD_ORGANIZATION` : Default organisation when creating new user
 - `TASKD_USERNAME` : User name for the first user
+- `TASKD_HOSTNAME` : the hostname used in traefik router
+- `TASKD_SERVICE` : the service name used in traefik router
 
 ## Use your own certificate configuration file with swarm
 
@@ -119,7 +121,7 @@ docker run -d \
   andir/taskd
 ```
 
-Or with the docker configs storage: 
+Or with the docker configs storage:
 ```sh
 docker config create taskd_vars vars
 docker run -d \
