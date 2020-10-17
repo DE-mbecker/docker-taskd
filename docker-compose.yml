@@ -2,8 +2,7 @@ version: '3'
 
 services:
   web:
-    image: 'taskd:0.2'
-    build: .
+      image: 'bitpirate/taskd:latest'
     restart: 'always'
     networks:
       - traefik

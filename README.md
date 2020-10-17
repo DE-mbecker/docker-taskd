@@ -1,7 +1,6 @@
-[![Twitter](https://img.shields.io/badge/Twitter-%40jeckel4-blue.svg)](https://twitter.com/jeckel4) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Julien%20Mercier-blue.svg)](https://www.linkedin.com/in/jeckel/)
 # Taskwarrior Server (taskd) Docker
 
-*Forked from [8sd/docker-taskd](https://github.com/8sd/docker-taskd)
+*Forked from [jeckel4/docker-taskd](https://github.com/jeckel4/docker-taskd)
 
 (c) 2015-2016 Óscar García Amor
 Redistribution, modifications and pull requests are welcomed under the terms
